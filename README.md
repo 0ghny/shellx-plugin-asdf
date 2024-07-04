@@ -17,16 +17,11 @@ To enable it edit your ~/.shellxrc file and adds
 ```shell
 SHELLX_PLUGIN_ASDF_FEATURES=( @all )
 ```
-### ASDF Version to install
+### ASDF Installation configuration
 
-By default it installed `v0.14.0` (you can check versions on [asdf-vm/asdf repo](https://github.com/asdf-vm/asdf)).
+By default it installed `v0.14.0` (you can check versions on [asdf-vm/asdf repo](https://github.com/asdf-vm/asdf)) on `$HOME/.asdf`, but you can change this behaviour as:
 
-You can specify version you prefer to install in case of not present in your system with `SHELLX_PLUGIN_ASDF_VERSION` configuration property.
+* `SHELLX_PLUGIN_ASDF_DIR` or having in your environment already `ASDF_DIR` will installs asdf into that directory
+* `SHELLX_PLUGIN_ASDF_VERSION` configuration property to change the version to install
 
-### Skip ASDF Installation
 
-You can skip asdf isntallation made by this plugin having the following configuration property in your `shellx configuration file`
-
-```shell
-SHELLX_PLUGIN_ASDF_SKIP_INSTALL=true
-```
