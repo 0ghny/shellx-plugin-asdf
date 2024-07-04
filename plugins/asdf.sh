@@ -5,7 +5,7 @@ fi
 
 ASDF_TARGET_VERSION="${SHELLX_PLUGIN_ASDF_VERSION:-v0.14.0}"
 
-if [[ ! -d "${ASDF_DIR}" ]] && [[ "${SHELLX_PLUGIN_ASDF_SKIP_INSTALL:-true}" != "true" ]]; then
+if [[ ! -d "${ASDF_DIR}" ]]; then
   git clone --quiet https://github.com/asdf-vm/asdf.git "${ASDF_DIR}" --branch "${ASDF_TARGET_VERSION}" > /dev/null 2>&1 || \
   echo "shellx-plugin-asdf: error cloning asdf, skipping initialisation"
 fi
